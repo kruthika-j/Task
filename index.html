@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- 
+    <div class="container">
+        <div class="signin">
+            <h1>Welcome back</h1><br>
+            <p style="font-size: 14px;color: gray; margin-top: -20px;">Welcome back! Please enter your details</p><br>
+            <form class="details">
+                <label for="email" style="text-align: left;">Email</label><br><br>
+                <input type="email" class="box" placeholder="Enter your email" id="email" autocomplete="on">
+                        <br><br>
+                <label for="password">Password</label>
+                        <br><br>
+                <input type="password" id="password" class="box" placeholder="*************"><br><br>
+                <div class="fp">
+                    <input type="checkbox">
+                    <label>Remember for 30 days</label>
+                    <a href="" style="float: right;text-decoration: none;font-size: small;">Forgot password</a>
+                </div>
+                    <br><br>
+                <button class="button" style="margin-top: -20px;">Signin</button>
+                <button class="button" id="b1">
+                    <img src="googleLogo.jfif" class="googleLogo"  alt="">
+                    Sign up with google
+                </button>
+                <p style="display:inline-block; padding-left: 45px; font-size: small; color: gray;">Don't have an account?</p>
+                <a href="#" style="text-decoration: none; font-size: small;">Sign up</a>
+            </form>
+        </div>
+    
+        <div>
+            <img src="image.jfif" class="rightImage" alt="">
+        </div>
+    </div>     -->
+    <script>
+        const container = document.createElement("div");
+        container.className = "container";
+
+        const signinDiv = document.createElement("div");
+        signinDiv.className = "signin";
+
+        const h1 = document.createElement("h1");
+        h1.textContent = "Welcome back";
+        signinDiv.appendChild(h1);
+
+        const p1 = document.createElement("p");
+        p1.textContent = "Welcome back! Please enter your details";
+        signinDiv.appendChild(p1);
+        p1.style.color="gray";
+        p1.style.fontSize = "small";
+
+        const form = document.createElement("form");
+        form.className = "details";
+
+        const emailLabel = document.createElement("label");
+        emailLabel.textContent = "Email";
+        form.appendChild(emailLabel);
+
+        form.appendChild(document.createElement("br"));
+
+        const emailInput = document.createElement("input");
+        emailInput.type = "email";
+        emailInput.className = "box";
+        emailInput.placeholder = "Enter your email";
+        emailInput.id = "email";
+        emailInput.autocomplete = "on";
+        form.appendChild(emailInput);
+
+        form.appendChild(document.createElement("br"));
+
+        const passwordLabel = document.createElement("label");
+        passwordLabel.textContent = "Password";
+        form.appendChild(passwordLabel);
+
+        form.appendChild(document.createElement("br"));
+
+        const passwordInput = document.createElement("input");
+        passwordInput.type = "password";
+        passwordInput.className = "box";
+        passwordInput.placeholder = "*************";
+        passwordInput.id = "password";
+        form.appendChild(passwordInput);
+
+        form.appendChild(document.createElement("br"));
+
+        const fpDiv = document.createElement("div");
+        fpDiv.className = "fp";
+
+        const rememberCheckbox = document.createElement("input");
+        rememberCheckbox.type = "checkbox";
+        fpDiv.appendChild(rememberCheckbox);
+
+        const rememberLabel = document.createElement("label");
+        rememberLabel.textContent = "Remember for 30 days";
+        fpDiv.appendChild(rememberLabel);
+
+        const forgotPasswordLink = document.createElement("a");
+        forgotPasswordLink.href = "#";
+        forgotPasswordLink.style.float = "right";
+        forgotPasswordLink.style.textDecoration = "none";
+        forgotPasswordLink.style.fontSize = "small";
+        forgotPasswordLink.textContent = "Forgot password";
+        fpDiv.appendChild(forgotPasswordLink);
+
+        form.appendChild(fpDiv);
+
+        form.appendChild(document.createElement("br"));
+
+        const signinButton = document.createElement("button");
+        signinButton.className = "button";
+        signinButton.textContent = "Signin";
+        form.appendChild(signinButton);
+
+        const signupButton = document.createElement("button");
+        signupButton.className = "button";
+        signupButton.id = "b1";
+        const googleLogoImg = document.createElement("img");
+        googleLogoImg.src = "googleLogo.jfif";
+        googleLogoImg.className = "googleLogo";
+        googleLogoImg.alt = "";
+        signupButton.appendChild(googleLogoImg);
+        signupButton.textContent= "Sign up with google";
+        form.appendChild(signupButton);
+
+        const accountText = document.createElement("p");
+        accountText.style.display = "inline-block";
+        accountText.style.paddingLeft = "45px";
+        accountText.style.fontSize = "small";
+        accountText.style.color = "gray";
+        accountText.textContent = "Don't have an account?";
+        form.appendChild(accountText);
+
+        const signupLink = document.createElement("a");
+        signupLink.href = "#";
+        signupLink.style.textDecoration = "none";
+        signupLink.style.fontSize = "small";
+        signupLink.textContent = "Sign up";
+        form.appendChild(signupLink);
+
+        signinDiv.appendChild(form);
+
+        container.appendChild(signinDiv);
+
+        const imageDiv = document.createElement("div");
+
+        const rightImage = document.createElement("img");
+        rightImage.src = "image.jfif";
+        rightImage.className = "rightImage";
+        rightImage.alt = "";
+
+        imageDiv.appendChild(rightImage);
+
+        container.appendChild(imageDiv);
+
+        document.body.appendChild(container);
+
+
+    </script>
+</body>
+
+</html>
